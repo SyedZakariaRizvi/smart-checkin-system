@@ -1,0 +1,33 @@
+{
+  "name": "smart-checkin-system",
+  "version": "1.0.0",
+  "description": "A smart check-in system using biometric authentication for attendance.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SyedZakariaRizvi/smart-checkin-system.git"
+  },
+  "keywords": [
+    "check-in",
+    "biometric",
+    "attendance"
+  ],
+  "author": "Syed Zakaria Rizvi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SyedZakariaRizvi/smart-checkin-system/issues"
+  },
+  "homepage": "https://github.com/SyedZakariaRizvi/smart-checkin-system#readme",
+  "devDependencies": {
+    "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.1"
+  }
+}
