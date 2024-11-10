@@ -2,6 +2,15 @@ require("dotenv").config()
 const express = require("express")
 const app = express()
 const path = require("path")
+const mongoose = require("mongoose")
+
+mongoose.connect(process.env.MONGODB_URI)
+    .then(() => { 
+        console.log("Database Connected")
+    })
+    .catch((err) => {
+        console.log("Error connecting to Database: ", err)
+    })
 
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname, "views"))
