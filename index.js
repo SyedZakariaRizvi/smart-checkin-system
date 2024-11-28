@@ -1,7 +1,7 @@
 require("dotenv").config()
 const express = require("express")
 const app = express()
-const path = require("path")
+const cors = require("cors")
 const mongoose = require("mongoose")
 
 mongoose.connect(process.env.MONGODB_URI)
@@ -12,11 +12,11 @@ mongoose.connect(process.env.MONGODB_URI)
         console.log("Error connecting to Database: ", err)
     })
 
-app.set("view engine", "ejs")
-app.set("views", path.join(__dirname, "views"))
+app.use(cors())
+app.use(express.json())
 
 app.get("/", (req, res) => {
-    res.render("home")
+    res.json({ message: "API is working" })
 })
 
 const PORT = process.env.PORT || 3000;
